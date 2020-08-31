@@ -12,9 +12,23 @@
         tools:layout="@layout/login_fragment" >
 
         <action
-            android:id="@+id/action_slides_to_dashboard_fragment"
-            app:destination="@id/login_fragment" />
+            android:id="@+id/action_login_to_home_fragment"
+            app:destination="@id/home_fragment" />
 
+    </fragment>
+
+    <fragment
+        android:id="@+id/home_fragment"
+        android:name="manu.apps.ecrime.fragments.HomeFragment"
+        android:label="Home Fragment"
+        tools:layout="@layout/home_fragment" >
+    </fragment>
+
+    <fragment
+        android:id="@+id/register_fragment"
+        android:name="manu.apps.ecrime.fragments.RegisterFragment"
+        android:label="Register Fragment"
+        tools:layout="@layout/register_fragment" >
     </fragment>
 
 </navigation>
