@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">ECrime</string>
+    <string name="enter_email">Enter Email</string>
+    <string name="login">Login</string>
+
+    <string name="text_register">Don\'t have an account? Register</string>
+</resources>
