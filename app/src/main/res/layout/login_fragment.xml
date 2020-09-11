@@ -11,7 +11,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="center_vertical|center_horizontal"
+        android:gravity="center_horizontal"
         android:orientation="vertical"
         android:padding="5dp">
 
@@ -36,9 +36,11 @@
                 android:layout_margin="5dp"
                 app:errorEnabled="true"
                 app:counterEnabled="true"
-                app:counterMaxLength="25"
+                app:counterMaxLength="100"
                 app:hintTextAppearance="@style/TextAppearance.AppCompat.Body1"
-                app:counterTextColor="@android:color/darker_gray">
+                app:counterTextColor="@android:color/white"
+                app:hintTextColor="@android:color/white"
+                android:textColorHint="@android:color/white">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/et_email"
@@ -46,7 +48,9 @@
                     android:layout_height="wrap_content"
                     android:hint="@string/enter_email"
                     android:inputType="textEmailAddress"
-                    android:maxLength="25"/>
+                    android:maxLength="150"
+                    android:background="@drawable/et_background_selector"
+                    android:textColor="@android:color/white"/>
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -57,10 +61,11 @@
                 android:layout_margin="5dp"
                 app:counterEnabled="true"
                 app:counterMaxLength="12"
-                app:counterTextColor="@android:color/darker_gray"
+                app:counterTextColor="@android:color/white"
                 app:passwordToggleEnabled="true"
                 app:passwordToggleTint="@android:color/white"
-                >
+                app:hintTextColor="@android:color/white"
+                android:textColorHint="@android:color/white">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/et_password"
@@ -69,7 +74,8 @@
                     android:hint="Enter password"
                     android:inputType="textPassword"
                     android:maxLength="12"
-                    />
+                    android:background="@drawable/et_background_selector"
+                    android:textColor="@android:color/white"/>
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -94,12 +100,13 @@
                 android:id="@+id/tv_register"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
+                android:layout_marginTop="20dp"
                 android:layout_marginBottom="5dp"
                 android:text="@string/text_register"
                 android:textAppearance="@style/TextAppearance.AppCompat.Body1"
                 android:textColor="@android:color/white"
-                android:theme="@style/MaterialTheme" />
+                android:theme="@style/MaterialTheme"
+                android:foreground="?attr/selectableItemBackgroundBorderless"/>
 
         </LinearLayout>
 

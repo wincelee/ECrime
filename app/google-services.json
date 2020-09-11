@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "654174129987",
+    "firebase_url": "https://ecrime-e1088.firebaseio.com",
+    "project_id": "ecrime-e1088",
+    "storage_bucket": "ecrime-e1088.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:654174129987:android:d6a719f9805ded8438a9f6",
+        "android_client_info": {
+          "package_name": "manu.apps.ecrime"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "654174129987-jtivrudl7siclbqd17gru5f6rge0ojt1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "manu.apps.ecrime",
+            "certificate_hash": "0b1aee0a29a4b2d91e8e12e93b3cfac8e450c564"
+          }
+        },
+        {
+          "client_id": "654174129987-q6cod2eij2ia90fvu0r2isiho5vqlr8b.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCazwo4GDCPot6SfEtOC8xtHFP_E0XsmeA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "654174129987-q6cod2eij2ia90fvu0r2isiho5vqlr8b.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -4,4 +4,6 @@
     <string name="login">Login</string>
 
     <string name="text_register">Don\'t have an account? Register</string>
+    <string name="enter_username">Enter Username</string>
+    <string name="proceed">Proceed</string>
 </resources>

@@ -1,13 +1,118 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragments.RegisterFragment">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.RegisterFragment"
+    android:orientation="vertical"
+    android:background="@drawable/gradient_background"
+    android:padding="5dp"
+    android:gravity="center_horizontal|center_vertical">
 
-    <TextView
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/ic_handcuffs" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_email"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Hello" />
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        app:errorEnabled="true"
+        app:counterEnabled="true"
+        app:counterMaxLength="100"
+        app:hintTextAppearance="@style/TextAppearance.AppCompat.Body1"
+        app:counterTextColor="@android:color/white"
+        app:hintTextColor="@android:color/white"
+        android:textColorHint="@android:color/white">
 
-</FrameLayout>
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/enter_email"
+            android:inputType="textEmailAddress"
+            android:maxLength="150"
+            android:background="@drawable/et_background_selector"
+            android:textColor="@android:color/white"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        app:errorEnabled="true"
+        app:counterEnabled="true"
+        app:counterMaxLength="50"
+        app:hintTextAppearance="@style/TextAppearance.AppCompat.Body1"
+        app:counterTextColor="@android:color/white"
+        app:hintTextColor="@android:color/white"
+        android:textColorHint="@android:color/white">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/enter_username"
+            android:inputType="textPersonName"
+            android:maxLength="50"
+            android:background="@drawable/et_background_selector"
+            android:textColor="@android:color/white"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        app:counterEnabled="true"
+        app:counterMaxLength="12"
+        app:counterTextColor="@android:color/white"
+        app:passwordToggleEnabled="true"
+        app:passwordToggleTint="@android:color/white"
+        app:hintTextColor="@android:color/white"
+        android:textColorHint="@android:color/white">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter password"
+            android:inputType="textPassword"
+            android:maxLength="12"
+            android:background="@drawable/et_background_selector"
+            android:textColor="@android:color/white"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:text="Register"
+        android:textColor="@android:color/white"
+        android:theme="@style/MaterialTheme"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="5dp"
+        android:text="Already have an account? Login"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@android:color/white"
+        android:theme="@style/MaterialTheme"
+        android:foreground="?attr/selectableItemBackgroundBorderless"/>
+
+
+</LinearLayout>
