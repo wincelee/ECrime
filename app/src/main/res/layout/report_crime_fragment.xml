@@ -116,6 +116,32 @@
 
         </com.google.android.material.textfield.TextInputLayout>
 
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_phone_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            app:errorEnabled="true"
+            app:counterEnabled="true"
+            app:counterMaxLength="100"
+            app:hintTextAppearance="@style/TextAppearance.AppCompat.Body1"
+            app:counterTextColor="@android:color/white"
+            app:hintTextColor="@android:color/white"
+            android:textColorHint="@android:color/white"
+            android:layout_below="@+id/til_crime_date">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_phone_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Phone Number"
+                android:inputType="number"
+                android:maxLength="150"
+                android:background="@drawable/et_background_selector"
+                android:textColor="@android:color/white"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
 <!--        <com.google.android.material.button.MaterialButton-->
 <!--            android:id="@+id/btn_get_location"-->
 <!--            android:layout_width="wrap_content"-->

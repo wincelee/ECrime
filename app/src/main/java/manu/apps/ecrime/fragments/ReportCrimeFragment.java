@@ -37,8 +37,8 @@ import manu.apps.ecrime.classes.Config;
 public class ReportCrimeFragment extends Fragment implements View.OnClickListener {
 
 
-    TextInputLayout tilCrimeCounty, tilSubCounty, tilCrimeDate, tilCrimeDescription;
-    TextInputEditText etCrimeCounty, etSubCounty, etCrimeDate, etCrimeDescription;
+    TextInputLayout tilCrimeCounty, tilSubCounty, tilCrimeDate, tilCrimeDescription, tilPhoneNumber;
+    TextInputEditText etCrimeCounty, etSubCounty, etCrimeDate, etCrimeDescription, etPhoneNumber;
     MaterialButton btnReportCrime;
 
     private FirebaseAuth firebaseAuth;
@@ -67,11 +67,13 @@ public class ReportCrimeFragment extends Fragment implements View.OnClickListene
         tilSubCounty = view.findViewById(R.id.til_sub_county);
         tilCrimeDate = view.findViewById(R.id.til_crime_date);
         tilCrimeDescription = view.findViewById(R.id.til_crime_description);
+        tilPhoneNumber = view.findViewById(R.id.til_phone_number);
 
         etCrimeCounty = view.findViewById(R.id.et_crime_county);
         etSubCounty = view.findViewById(R.id.et_sub_county);
         etCrimeDate = view.findViewById(R.id.et_crime_date);
         etCrimeDescription = view.findViewById(R.id.et_crime_description);
+        etPhoneNumber = view.findViewById(R.id.et_phone_number);
         btnReportCrime = view.findViewById(R.id.btn_report_crime);
 
         btnReportCrime.setOnClickListener(this);
@@ -86,6 +88,7 @@ public class ReportCrimeFragment extends Fragment implements View.OnClickListene
             final String subCounty = etSubCounty.getText().toString().trim();
             final String crimeDate = etCrimeDate.getText().toString().trim();
             final String crimeDescription = etCrimeDescription.getText().toString().trim();
+            final String phoneNumber = etPhoneNumber.getText().toString().trim();
 
             if (TextUtils.isEmpty(county)) {
                 tilCrimeCounty.setError("County of crime is required");
@@ -106,7 +109,12 @@ public class ReportCrimeFragment extends Fragment implements View.OnClickListene
                 tilCrimeDescription.setError("Description of crime is required");
                 return;
 
-            } else {
+            }
+            if (TextUtils.isEmpty(phoneNumber)) {
+                tilCrimeDescription.setError("Phone Number is required");
+                return;
+
+            }else {
 
                 final ProgressDialog pdReportCrime = new ProgressDialog(getActivity());
                 pdReportCrime.setMessage("Loading.....");
@@ -125,6 +133,8 @@ public class ReportCrimeFragment extends Fragment implements View.OnClickListene
                 hashMap.put("subCounty", subCounty);
                 hashMap.put("crimeDate", crimeDate);
                 hashMap.put("crimeDescription", crimeDescription);
+                hashMap.put("phoneNumber", phoneNumber);
+
 
                 databaseReference.setValue(hashMap).addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override
