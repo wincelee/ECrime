@@ -6,4 +6,6 @@
     <string name="text_register">Don\'t have an account? Register</string>
     <string name="enter_username">Enter Username</string>
     <string name="proceed">Proceed</string>
+    <string name="enter_phone_number">Enter Phone Number</string>
+    <string name="enter_county">Enter County</string>
 </resources>

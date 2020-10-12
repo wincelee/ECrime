@@ -12,8 +12,8 @@
         tools:layout="@layout/login_fragment" >
 
         <action
-            android:id="@+id/action_login_to_home"
-            app:destination="@id/nav_home_fragment"
+            android:id="@+id/action_login_to_report_crime"
+            app:destination="@id/nav_report_crime_fragment"
             app:popUpTo="@id/navigation_graph"
             app:popUpToInclusive="true"
             app:enterAnim="@anim/nav_default_enter_anim"
@@ -32,10 +32,10 @@
     </fragment>
 
     <fragment
-        android:id="@+id/nav_home_fragment"
-        android:name="manu.apps.ecrime.fragments.HomeFragment"
-        android:label="Home"
-        tools:layout="@layout/home_fragment" >
+        android:id="@+id/nav_report_crime_fragment"
+        android:name="manu.apps.ecrime.fragments.ReportCrimeFragment"
+        android:label="Report a Crime"
+        tools:layout="@layout/report_crime_fragment" >
     </fragment>
 
     <fragment
@@ -54,7 +54,7 @@
 
         <action
             android:id="@+id/action_register_to_home"
-            app:destination="@id/nav_home_fragment"
+            app:destination="@id/nav_report_crime_fragment"
             app:popUpTo="@id/navigation_graph"
             app:popUpToInclusive="true"
             app:enterAnim="@anim/nav_default_enter_anim"

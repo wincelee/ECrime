@@ -1,8 +1,6 @@
 package manu.apps.ecrime.fragments;
 
 import androidx.appcompat.app.AlertDialog;
-import androidx.core.content.ContextCompat;
-import androidx.lifecycle.ViewModelProvider;
 
 import android.app.ProgressDialog;
 import android.os.Bundle;
@@ -23,7 +21,6 @@ import android.widget.TextView;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.button.MaterialButton;
-import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.auth.AuthResult;
@@ -31,11 +28,8 @@ import com.google.firebase.auth.FirebaseAuth;
 
 import manu.apps.ecrime.R;
 import manu.apps.ecrime.classes.Config;
-import manu.apps.ecrime.viewmodels.LoginViewModel;
 
-public class LoginFragment extends Fragment implements View.OnClickListener {
-
-    private LoginViewModel loginViewModel;
+public class LoginFragment extends Fragment implements View.OnClickListener, TextWatcher {
 
     TextInputLayout tilEmail, tilPassword;
 
@@ -62,7 +56,6 @@ public class LoginFragment extends Fragment implements View.OnClickListener {
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
-        loginViewModel = new ViewModelProvider(this).get(LoginViewModel.class);
     }
 
     @Override
@@ -86,40 +79,6 @@ public class LoginFragment extends Fragment implements View.OnClickListener {
         // Setting on click listeners
         tvRegister.setOnClickListener(this);
         btnLogin.setOnClickListener(this);
-
-        etEmail.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
-            }
-
-            @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-                tilEmail.setErrorEnabled(false);
-            }
-
-            @Override
-            public void afterTextChanged(Editable s) {
-
-            }
-        });
-
-        etPassword.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
-            }
-
-            @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-                tilPassword.setErrorEnabled(false);
-            }
-
-            @Override
-            public void afterTextChanged(Editable s) {
-
-            }
-        });
 
     }
 
@@ -157,7 +116,7 @@ public class LoginFragment extends Fragment implements View.OnClickListener {
                 @Override
                 public void onComplete(@NonNull Task<AuthResult> task) {
                     if (task.isSuccessful()){
-                        navController.navigate(R.id.action_login_to_home);
+                        navController.navigate(R.id.action_login_to_report_crime);
 
                         pbLogin.dismiss();
 
@@ -181,4 +140,19 @@ public class LoginFragment extends Fragment implements View.OnClickListener {
 
     }
 
+    @Override
+    public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+    }
+
+    @Override
+    public void onTextChanged(CharSequence s, int start, int before, int count) {
+        tilEmail.setErrorEnabled(false);
+        tilPassword.setErrorEnabled(false);
+    }
+
+    @Override
+    public void afterTextChanged(Editable s) {
+
+    }
 }

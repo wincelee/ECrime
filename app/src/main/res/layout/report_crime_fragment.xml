@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.ReportCrimeFragment"
+    android:background="@drawable/gradient_background">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:padding="5dp">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_crime_county"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            app:errorEnabled="true"
+            app:counterEnabled="true"
+            app:counterMaxLength="100"
+            app:hintTextAppearance="@style/TextAppearance.AppCompat.Body1"
+            app:counterTextColor="@android:color/white"
+            app:hintTextColor="@android:color/white"
+            android:textColorHint="@android:color/white">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_crime_county"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter County of crime scene"
+                android:inputType="text"
+                android:maxLength="150"
+                android:background="@drawable/et_background_selector"
+                android:textColor="@android:color/white"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_sub_county"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            app:errorEnabled="true"
+            app:counterEnabled="true"
+            app:counterMaxLength="100"
+            app:hintTextAppearance="@style/TextAppearance.AppCompat.Body1"
+            app:counterTextColor="@android:color/white"
+            app:hintTextColor="@android:color/white"
+            android:textColorHint="@android:color/white"
+            android:layout_below="@+id/til_crime_county">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_sub_county"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Sub County of crime scene"
+                android:inputType="text"
+                android:maxLength="150"
+                android:background="@drawable/et_background_selector"
+                android:textColor="@android:color/white"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_crime_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            app:errorEnabled="true"
+            app:counterEnabled="true"
+            app:counterMaxLength="100"
+            app:hintTextAppearance="@style/TextAppearance.AppCompat.Body1"
+            app:counterTextColor="@android:color/white"
+            app:hintTextColor="@android:color/white"
+            android:textColorHint="@android:color/white"
+            android:layout_below="@+id/til_sub_county">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_crime_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter date of crime"
+                android:inputType="text"
+                android:maxLength="150"
+                android:background="@drawable/et_background_selector"
+                android:textColor="@android:color/white"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_crime_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            app:errorEnabled="true"
+            app:counterEnabled="true"
+            app:counterMaxLength="100"
+            app:hintTextAppearance="@style/TextAppearance.AppCompat.Body1"
+            app:counterTextColor="@android:color/white"
+            app:hintTextColor="@android:color/white"
+            android:textColorHint="@android:color/white"
+            android:layout_below="@+id/til_crime_date">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_crime_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter More Description"
+                android:inputType="text"
+                android:maxLength="150"
+                android:background="@drawable/et_background_selector"
+                android:textColor="@android:color/white"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+<!--        <com.google.android.material.button.MaterialButton-->
+<!--            android:id="@+id/btn_get_location"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="5dp"-->
+<!--            android:layout_marginBottom="5dp"-->
+<!--            android:text="Get My Location"-->
+<!--            android:textColor="@android:color/white"-->
+<!--            android:theme="@style/MaterialTheme"-->
+<!--            android:layout_below="@+id/til_crime_description"-->
+<!--            android:layout_centerHorizontal="true"/>-->
+<!--        -->
+<!--        <TextView-->
+<!--            android:id="@+id/tv_lat_long"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_below="@id/btn_get_location"/>-->
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_report_crime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:text="Report Crime"
+            android:textColor="@android:color/white"
+            android:theme="@style/MaterialTheme"
+            android:layout_below="@id/til_crime_description"
+            android:layout_centerHorizontal="true"/>
+
+    </RelativeLayout>
+
+</ScrollView>
